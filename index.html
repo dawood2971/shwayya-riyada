@@ -487,6 +487,46 @@ button,a,select,input,label,[role=button]{touch-action:manipulation;-webkit-tap-
 .sttag{font-size:13.5px!important}
 .food{font-size:13.5px}
 @media (max-width:420px){.node{width:34px;height:34px;font-size:15px}.node.ex{width:28px;height:28px}.lanebox{font-size:13px}.lanebox b{font-size:15px}.hx-stats>div{padding:10px 8px}}
+
+/* sports content cards (sx) */
+#app .card.sx{position:relative;overflow:hidden;isolation:isolate;border:0;border-radius:22px;padding:22px 20px;gap:16px;color:#fff;box-shadow:0 14px 34px rgba(22,24,28,.22)}
+#app .sx-dark{background:#16181C}
+#app .sx-dark::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle,rgba(233,83,27,.55) 1.3px,transparent 1.8px) 0 0/11px 11px;-webkit-mask:radial-gradient(120% 90% at 0% 100%,#000 0%,transparent 55%);mask:radial-gradient(120% 90% at 0% 100%,#000 0%,transparent 55%)}
+#app .sx-dark::after{content:"";position:absolute;inset-inline-end:0;top:0;width:8px;height:100%;background:repeating-linear-gradient(180deg,#E9531B 0 18px,transparent 18px 26px)}
+#app .sx-ghost{position:absolute;inset-inline-start:-6px;bottom:-30px;z-index:-1;font:900 120px/1 var(--display,Cairo),sans-serif;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.08);pointer-events:none;user-select:none}
+#app .sx-head{display:grid;gap:8px}
+#app .sx-tag{justify-self:start;font:800 12px/1 var(--display,Cairo),sans-serif;letter-spacing:.04em;padding:7px 12px 6px;background:#E9531B;color:#fff;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+#app .sx h3{margin:0;font:900 clamp(22px,6vw,28px)/1.25 var(--display,Cairo),sans-serif;color:#fff;letter-spacing:-.005em}
+#app .sx h3 em{font-style:normal;color:#FF7A45}
+#app .sx p{margin:0;color:rgba(255,255,255,.86);line-height:1.85}
+#app .sx-goals{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+#app .sx-goals li{display:grid;grid-template-columns:auto auto 1fr;align-items:start;gap:10px;padding:12px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+#app .sx-n{font:900 22px/1 var(--display,Cairo),sans-serif;color:transparent;-webkit-text-stroke:1.2px #FF7A45;padding-top:4px;direction:ltr}
+#app .sx-i{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:#E9531B}
+#app .sx-i svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#app .sx-goals p{font-size:14.5px;line-height:1.7;color:rgba(255,255,255,.9)}
+#app .sx-or{background:linear-gradient(160deg,#CC4410 0%,#AE3A0C 100%)}
+#app .sx-or::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle,rgba(22,24,28,.28) 1.4px,transparent 1.9px) 0 0/10px 10px;-webkit-mask:radial-gradient(90% 70% at 100% 0%,#000 0%,transparent 60%);mask:radial-gradient(90% 70% at 100% 0%,#000 0%,transparent 60%)}
+#app .sx-or::after{content:"";position:absolute;left:-40px;top:14px;width:46%;height:40px;z-index:-1;background:repeating-linear-gradient(90deg,rgba(255,255,255,.14) 0 3px,transparent 3px 14px);transform:skewY(-8deg)}
+#app .sx-or .sx-tag{background:#16181C}
+#app .sx-top{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
+#app .sx-ring{position:relative;width:118px;height:118px;flex:none}
+#app .sx-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+#app .sx-ring circle{fill:none;stroke-width:10}
+#app .sx-ring .t{stroke:rgba(255,255,255,.22)}
+#app .sx-ring .f{stroke:#fff;stroke-linecap:round;stroke-dasharray:314.16;stroke-dashoffset:0}
+#app .sx-ring .k path{stroke:rgba(22,24,28,.5);stroke-width:2;fill:none}
+#app .sx-rv{position:absolute;inset:0;display:grid;place-content:center;text-align:center;line-height:1}
+#app .sx-rv b{font:900 38px/1 var(--display,Cairo),sans-serif;color:#fff}
+#app .sx-rv small{font:700 11px/1.2 var(--display,Cairo),sans-serif;color:rgba(255,255,255,.9);margin-top:4px}
+#app .sx-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#app .sx-stats span{display:grid;gap:3px;padding:10px;border-radius:12px;background:rgba(22,24,28,.22)}
+#app .sx-stats small{font-size:11.5px;color:rgba(255,255,255,.82)}
+#app .sx-stats b{font:800 13.5px/1.3 var(--display,Cairo),sans-serif;color:#fff}
+#app .sx-body{margin:2px -20px -22px;padding:18px 20px 22px;background:#16181C;border-radius:18px 18px 0 0}
+#app .sx-body b{color:#FF7A45}
+@media (max-width:360px){#app .sx-top{grid-template-columns:1fr}#app .sx-ring{justify-self:center}}
+@media (prefers-reduced-motion:no-preference){#app .sx-ring .f{animation:sxRing 1.4s cubic-bezier(.2,.8,.2,1) both}@keyframes sxRing{from{stroke-dashoffset:314.16}}}
 </style>
 <div id="app" dir="rtl" lang="ar">
   <a class="skip" href="#view">تخطَّ إلى المحتوى</a>
@@ -686,13 +726,27 @@ function vStart(){
  ${S.path?`<p class="muted">${coreLeft().length?`لتحصل على شهادتك: ${coreLeft().length===coreIdx().length?"أنهِ":"باقي لك"} ${coreLeft().length} ${coreLeft().length>2?"محطات":coreLeft().length===2?"محطتين":"محطة"} ثم الاختبار · نحو ${dq(leftMin())}`:"أحسنت! أنهيت محطات الشهادة، فتوجّه إلى خط النهاية"}</p>`:""}
  <div class="tiles">${ST.map((s,i)=>isCore(s.id)?tile(s,i):"").join("")}<button class="tile" data-go="${N}" ${S.path&&finOpen()?"":"disabled"}><span class="ic">${ICON.fin}</span><span class="tn">خط النهاية · ⏱ 1 د</span><b>اختبار وشهادة</b><span class="ts">${QN} أسئلة ثم شهادتك باسمك</span><span class="st">${!S.path?"اختر مدرستك أولًا":finOpen()?"ابدأ":"🔒 بعد محطات الشهادة"}</span></button></div>
  </section>
- <section class="card"><h3>عن اليوم الرياضي «شوية رياضة»</h3>
+ <section class="card sx sx-dark" aria-labelledby="sxA">
+  <span class="sx-ghost" aria-hidden="true">رياضة</span>
+  <div class="sx-head"><span class="sx-tag">٠١ · عن الحدث</span><h3 id="sxA">عن اليوم الرياضي <em>«شوية رياضة»</em></h3></div>
   <p>يوم رياضي ذو صبغة وطنية يُفعَّل في المدارس كل عام، تُستثمر فيه الأنشطة الرياضية الترفيهية والترويحية والتثقيفية، التنافسية وغير التنافسية، ليجمع الطلبة والهيئة التدريسية وأولياء الأمور والمجتمع المحلي في أجواء من المرح والألفة.</p>
-  <ul class="clean"><li>ترسيخ ممارسة الرياضة سلوكًا صحيًا يوميًا، وتحسين مؤشرات الصحة واللياقة لكل الفئات العمرية.</li><li>تعزيز قيم المواطنة والمسؤولية المجتمعية، وزيادة المشاركة الفاعلة في النشاط البدني.</li><li>الحد من مخاطر الألعاب الإلكترونية على الطلبة، والتوعية بأضرار الإفراط فيها.</li></ul>
+  <ol class="sx-goals">
+   <li><span class="sx-n" aria-hidden="true">01</span><span class="sx-i" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.5 8.5c0 5-8.5 11-8.5 11S3.5 13.5 3.5 8.5A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 8.5 2.5z"/><path d="M6 12h3l1.5-2.5 2 4.5 1.5-2h4"/></svg></span><p>ترسيخ ممارسة الرياضة سلوكًا صحيًا يوميًا، وتحسين مؤشرات الصحة واللياقة لكل الفئات العمرية.</p></li>
+   <li><span class="sx-n" aria-hidden="true">02</span><span class="sx-i" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="8" r="2.4"/><path d="M3.5 20c0-3.3 2.5-6 5.5-6s5.5 2.7 5.5 6M14.5 14.3c.8-.5 1.6-.8 2.5-.8 2.3 0 4 2 4 4.5"/></svg></span><p>تعزيز قيم المواطنة والمسؤولية المجتمعية، وزيادة المشاركة الفاعلة في النشاط البدني.</p></li>
+   <li><span class="sx-n" aria-hidden="true">03</span><span class="sx-i" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="11" rx="5"/><path d="M7.5 11v3M6 12.5h3"/><path d="M4 4l16 17"/></svg></span><p>الحد من مخاطر الألعاب الإلكترونية على الطلبة، والتوعية بأضرار الإفراط فيها.</p></li>
+  </ol>
   ${refs(["moe","mcsy"])}
  </section>
- <section class="card"><h3>لماذا الصحة المدرسية في اليوم الرياضي؟</h3>
-  <p>توصي منظمة الصحة العالمية من هم بين 5 و17 سنة بمتوسط <b><span data-count="60">60</span> دقيقة يوميًا</b> من النشاط البدني المعتدل إلى الشديد، مع التقليل من الجلوس الطويل ووقت الشاشات الترفيهي. هذا المسار يحوّل التوصية إلى تجربة يعيشها الطالب بنفسه، ليرى أن الصحة والرياضة تسيران في مسار واحد.</p>
+ <section class="card sx sx-or" aria-labelledby="sxB">
+  <div class="sx-top">
+   <div class="sx-head"><span class="sx-tag">٠٢ · الهدف اليومي</span><h3 id="sxB">لماذا الصحة المدرسية في اليوم الرياضي؟</h3></div>
+   <div class="sx-ring" role="img" aria-label="60 دقيقة يوميًا من النشاط البدني لعمر 5 إلى 17 سنة">
+    <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" class="t"/><circle cx="60" cy="60" r="50" class="f"/><g class="k"><path d="M60 4v8M116 60h-8M60 116v-8M4 60h8"/></g></svg>
+    <span class="sx-rv"><b><span data-count="60">60</span></b><small>دقيقة يوميًا</small></span>
+   </div>
+  </div>
+  <div class="sx-stats"><span><small>العمر</small><b>5–17 سنة</b></span><span><small>الشدّة</small><b>معتدل إلى شديد</b></span></div>
+  <div class="sx-body"><p>توصي منظمة الصحة العالمية من هم بين 5 و17 سنة بمتوسط <b>60 دقيقة يوميًا</b> من النشاط البدني المعتدل إلى الشديد، مع التقليل من الجلوس الطويل ووقت الشاشات الترفيهي. هذا المسار يحوّل التوصية إلى تجربة يعيشها الطالب بنفسه، ليرى أن الصحة والرياضة تسيران في مسار واحد.</p></div>
   ${refs(["who","whofs","moepa","sapa"])}
  </section>
 `;
